@@ -1,0 +1,17 @@
+function groupByField(arr, field) {
+  return arr.reduce((result, obj) => {
+    const key = obj[field];
+    if (result[key]) {
+      result[key].push(obj);
+    } else {
+      result[key] = [obj];
+    }
+    return result;
+  }, {});
+}
+const arr = [{test: 1},{test: 2},{test: 3},{test: 1},{test: 1}];
+const res = groupByField(arr, 'test');
+console.log(res); // { 1: [{test: 1}, {test: 1}, {test: 1}], 2: [{test: 2}], 3: [{test: 3}]}
+
+Вывод:
+{1: Array(3), 2: Array(1), 3: Array(...}
