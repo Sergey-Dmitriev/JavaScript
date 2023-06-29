@@ -1,0 +1,14 @@
+function convertArrToObj(arr) {
+  const obj = {};
+  arr.forEach((item, index) => {
+    obj[index] = item;
+  });
+  return obj;
+}
+
+const arr = [1, null, 'test', undefined];
+const obj = convertArrToObj(arr);
+console.log(obj); // { 0: 1, 1: null, 2: 'test', 3: undefined }
+
+Вывод:
+(4) {0: 1, 1: null, 2: "test", 3: undefi...}
