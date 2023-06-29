@@ -1,0 +1,9 @@
+function plus(num) {
+  return this + num;
+}
+Number.prototype.plus = plus;
+
+console.log((1).plus(2)); // 3
+
+Вывод:
+3
