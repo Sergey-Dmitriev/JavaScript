@@ -1,0 +1,19 @@
+function count(num) {
+  if (typeof num !== 'number') {
+    return ;
+  }
+  
+  return function nextCount(nextNum) {
+    if (typeof nextNum !== 'number') {
+      return num;
+       
+    return count(num + nextNum);
+  }
+}
+
+console.log(count(3)(2)(1)(5)(7)); // 18
+console.log(count(3)(null)(1)('asad')()); // 4
+
+Вывод:
+18
+4
