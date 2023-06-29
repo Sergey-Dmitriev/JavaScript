@@ -1,0 +1,17 @@
+function getType(arg) {
+  return typeof arg;
+}
+console.log(getType(5)); // "number"
+console.log(getType("Hello")); // "string"
+console.log(getType(true)); // "boolean"
+console.log(getType([])); // "object"
+console.log(getType(null)); // "object"
+console.log(getType(undefined)); // "undefined"
+
+Вывод
+number
+string
+boolean
+object
+object
+undefined
